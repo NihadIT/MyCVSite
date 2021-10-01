@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "My courses";
+}
+
+@{
+    foreach (var course in Model.allCourses)
+    {
+        <p/>
+        <div class="text-center border border-secondary ">
+            <h4>Date: @course.dateTime.ToString("dd.MM.yyyy")</h4>
+            <img class="img-thumbnail" src="@course.img" />
+            <h4 class="font-weight-normal">@course.desc</h4>
+        </div>
+    }
+}
